@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd" version="2.0">
+
+    <named-query name="Mfdfaresults.deleteResultsByID">
+        <query>DELETE FROM Mfdfaresults m where m.mfdfaresultsPK.mfdfaresultsslug = :mfdfaresulsslug</query>
+    </named-query>
+    <named-query name="Mfdfaresults.findResultsByID">
+        <query>SELECT m FROM Mfdfaresults m where m.mfdfaresultsPK.mfdfaresultsslug = :mfdfaresulsslug</query>
+    </named-query>
+    <named-query name="Dfaresults.deleteResultsByID">
+        <query>DELETE FROM Dfaresults d WHERE d.dfaresultsPK.mfdfaresultsslug = :mfdfaresultsslug</query>
+    </named-query>
+    <named-query name="Dfaresults.findResultsByID">
+        <query>SELECT d FROM Dfaresults d WHERE d.dfaresultsPK.mfdfaresultsslug = :mfdfaresultsslug</query>
+    </named-query>
+</entity-mappings>
